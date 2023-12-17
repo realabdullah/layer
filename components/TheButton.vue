@@ -11,11 +11,16 @@ const {
 </script>
 
 <template>
-	<button class="__btn w-100 flex items-center content-center bg-transparent weight-medium col-white self-start" :class="type" :type="usage" :disabled="value === 'loading'">
-		<Loader v-if="value === 'loading'" />
-		<span v-else>{{ value }}</span>
-		<slot />
-	</button>
+  <button
+    class="__btn w-100 flex items-center content-center bg-transparent weight-medium col-white self-start"
+    :class="type"
+    :type="usage"
+    :disabled="value === 'loading'"
+  >
+    <Loader v-if="value === 'loading'" />
+    <span v-else>{{ value }}</span>
+    <slot />
+  </button>
 </template>
 
 <style lang="scss" scoped>
